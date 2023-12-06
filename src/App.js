@@ -1,10 +1,14 @@
 import "./App.css";
 
+// components
+import { Auth } from "./components/Auth";
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>React Firebase TEST</h1>
+        <Auth />
       </header>
     </div>
   );
