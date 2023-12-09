@@ -1,5 +1,8 @@
 :root {
-  --background: #6a62d2;
+  --backgroundViolet: #6a62d2;
+  --backgrorundWhite: #fff;
+  --border: #312c7e;
+  --backgroundLightGray: rgb(223, 223, 223);
 }
 
 body {
@@ -23,5 +26,42 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--backgroundViolet);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--backgrorundWhite);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 40px;
+}
+.container__title {
+  text-transform: uppercase;
+  margin: 0 20px 20px;
+}
+input {
+  width: 100%;
+  background-color: var(--backgroundLightGray);
+  margin-bottom: 10px;
+  padding: 20px 0;
+  border: none;
+  border-radius: 2px;
+  color: gray;
+}
+input {
+  text-indent: 10px;
+}
+button {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+  background-color: var(--backgroundViolet);
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
 }
