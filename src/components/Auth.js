@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 
 // components
 import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 export const Auth = () => {
   const [email, setEmail] = useState("");
@@ -29,6 +30,7 @@ export const Auth = () => {
     <div className="auth-container">
       <h2>ReactJS Firebase Test</h2>
       <SignUp />
+      <SignIn />
       <input
         placeholder="email..."
         type="email"
