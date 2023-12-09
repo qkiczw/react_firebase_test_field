@@ -23,8 +23,8 @@ export const Auth = () => {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
+    <div className="auth-container">
+      <h2>ReactJS Firebase Test</h2>
       <input
         placeholder="email..."
         type="email"
