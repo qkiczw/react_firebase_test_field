@@ -32,7 +32,9 @@ export const Auth = () => {
       <SignUp />
       <SignIn />
 
-      <p>{auth.currentUser ? "Zarejestrowany" : "Zarejestruj się!!"}</p>
+      <button className="btn--log-out" onClick={logOut}>
+        Log Me Out
+      </button>
     </div>
   );
 };

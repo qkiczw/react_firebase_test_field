@@ -26,7 +26,7 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   background-color: var(--backgroundViolet);
 }
 .container {
@@ -37,7 +37,7 @@ code {
   align-items: center;
   background-color: var(--backgrorundWhite);
   border: 1px solid var(--border);
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 40px;
 }
 .container__title {
@@ -66,4 +66,17 @@ button {
   text-transform: uppercase;
   border: none;
   border-radius: 2px;
+}
+
+button:hover {
+  background-color: #312c7e;
+  cursor: pointer;
+}
+button:active {
+  background-color: #534e9b;
+}
+.btn--log-out {
+  width: 200px;
+  border-radius: 2px;
+  border: 1px solid var(--backgrorundWhite);
 }
