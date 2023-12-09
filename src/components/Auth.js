@@ -31,18 +31,7 @@ export const Auth = () => {
       <h2>ReactJS Firebase Test</h2>
       <SignUp />
       <SignIn />
-      <input
-        placeholder="email..."
-        type="email"
-        onChange={(e) => setEmail(e.target.value)} //od razu można target z eventa zapisać do stanu bez pisania dodatkowej funkcji
-      />
-      <input
-        placeholder="password..."
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={signUp}>Sign Up</button>
-      <button onClick={logOut}>Log Out</button>
+
       <p>{auth.currentUser ? "Zarejestrowany" : "Zarejestruj się!!"}</p>
     </div>
   );
