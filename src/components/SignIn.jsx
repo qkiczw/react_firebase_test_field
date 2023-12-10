@@ -27,17 +27,23 @@ const SignIn = () => {
 
   return (
     <div className="container">
-      <h2 className="container__title">Log In To Your Account</h2>
+      <h2 className="container__title">Log In</h2>
       <input
         type="text"
         placeholder="Enter your Email"
         onChange={(e) => setEmail(e.target.value)}
+        className="input__email"
       />
       <input
         type="password"
         placeholder="Enter your password"
         onChange={(e) => setPassword(e.target.value)}
+        className="input__password"
       />
+      <div className="show-password__container">
+        <input type="checkbox" id="show-password" />
+        <label htmlFor="show-password">Show password</label>
+      </div>
       <button onClick={singIn}>Sign In</button>
     </div>
   );

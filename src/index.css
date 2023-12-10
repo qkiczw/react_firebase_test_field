@@ -21,7 +21,6 @@ code {
 
 .auth-container {
   width: 100%;
-  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,36 +29,42 @@ code {
   background-color: var(--backgroundViolet);
 }
 .container {
-  width: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  max-width: 315px;
+  display: block;
   background-color: var(--backgrorundWhite);
   border: 1px solid var(--border);
   border-radius: 5px;
-  padding: 40px;
+  padding: 30px 20px 20px;
 }
 .container__title {
+  width: 100%;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-input {
+.input__email,
+.input__password {
   width: 100%;
+  /* width: 275px; */
   background-color: var(--backgroundLightGray);
   margin-bottom: 10px;
-  padding: 20px 0;
+  padding: 20px;
   border: none;
   border-radius: 2px;
   color: gray;
 }
-input {
-  text-indent: 10px;
+
+.show-password__container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
 }
 button {
   width: 100%;
   margin-top: 10px;
-  margin-bottom: 10px;
   padding: 20px 10px;
   background-color: var(--backgroundViolet);
   color: #fff;
