@@ -16,6 +16,16 @@ const SignUp = () => {
     }
   };
 
+  const showPassword = () => {
+    const passwordInput = document.querySelector(".sign-up-password");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+    } else {
+      passwordInput.type = "password";
+    }
+  };
+
   return (
     <div className="container">
       <h2 className="container__title">Create an Account</h2>
@@ -29,11 +39,15 @@ const SignUp = () => {
         type="password"
         placeholder="Enter your password"
         onChange={(e) => setPassword(e.target.value)}
-        className="input__password"
+        className="input__password sign-up-password"
       />
       <div className="show-password__container">
-        <input type="checkbox" id="show-password" />
-        <label htmlFor="show-password">Show password</label>
+        <input
+          type="checkbox"
+          id="show-sign-up-password"
+          onClick={showPassword}
+        />
+        <label htmlFor="show-sign-up-password">Show password</label>
       </div>
       <button onClick={signUp}>Sign up</button>
     </div>
