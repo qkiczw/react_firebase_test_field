@@ -1,8 +1,12 @@
 :root {
-  --backgroundViolet: #6a62d2;
-  --backgrorundWhite: #fff;
-  --border: #312c7e;
+  --backgroundPage: #fbfada;
+  --backgrorundElement: #adbc9f;
+  --backgroundInput: #fff;
+  --border: #12372a;
   --backgroundLightGray: rgb(223, 223, 223);
+  --fontColor: #283618;
+  --button: #12372a;
+  --buttonHover: #436850;
 }
 
 body {
@@ -19,6 +23,38 @@ code {
     monospace;
 }
 
+.app {
+  container-type: inline-size;
+  container-name: appContainer;
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--backgroundPage);
+}
+.page {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundPage);
+}
+.container {
+  max-width: 315px;
+  display: block;
+  background-color: var(--backgrorundElement);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 30px 20px 20px;
+  color: var(--fontColor);
+}
+
+.vertical-line {
+  display: none;
+  width: 1px;
+  height: 300px;
+  background-color: var(--button);
+}
 .auth-container {
   width: 100%;
   min-height: 100dvh;
@@ -27,15 +63,14 @@ code {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: var(--backgroundViolet);
+  background-color: var(--backgroundPage);
 }
-.container {
-  max-width: 315px;
-  display: block;
-  background-color: var(--backgrorundWhite);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 30px 20px 20px;
+
+.auth-forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 .container__title {
   width: 100%;
@@ -47,12 +82,12 @@ code {
 .input__password {
   width: 100%;
   /* width: 275px; */
-  background-color: var(--backgroundLightGray);
+  background-color: var(--backgroundInput);
   margin-bottom: 10px;
   padding: 20px;
   border: none;
   border-radius: 2px;
-  color: gray;
+  color: var(--fontColor);
 }
 
 .show-password__container {
@@ -67,15 +102,19 @@ button {
   width: 100%;
   margin-top: 10px;
   padding: 20px 10px;
-  background-color: var(--backgroundViolet);
+  background-color: var(--button);
   color: #fff;
   text-transform: uppercase;
   border: none;
   border-radius: 2px;
 }
 
+button.logMeOut {
+  width: 300px;
+}
+
 button:hover {
-  background-color: #312c7e;
+  background-color: var(--buttonHover);
   cursor: pointer;
 }
 button:active {
@@ -84,5 +123,14 @@ button:active {
 .btn--log-out {
   width: 200px;
   border-radius: 2px;
-  border: 1px solid var(--backgrorundWhite);
+  border: 1px solid var(--backgrorundElement);
+}
+
+@container appContainer (min-width: 760px) {
+  .auth-forms {
+    flex-direction: row;
+  }
+  .vertical-line {
+    display: block;
+  }
 }
